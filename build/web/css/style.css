@@ -1,0 +1,359 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+/* Header styles */
+.header {
+    background-color: #ff3333;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .logo {
+    display: flex;
+    align-items: center;
+}
+
+.header .logo img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.header .logo h1 {
+    font-size: 24px;
+}
+
+.header .nav {
+    display: flex;
+    gap: 20px;
+}
+
+.header .nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.header .nav a:hover {
+    text-decoration: underline;
+}
+
+/* Header top-right section with hotline and account */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.hotline {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: white;
+    font-weight: bold;
+}
+
+.hotline-text {
+    color: white;
+    text-decoration: none;
+}
+
+.hotline-text:hover {
+    text-decoration: underline;
+}
+
+/* My Account Dropdown styles */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.account-button {
+    background-color: transparent;
+    color: white;
+    padding: 8px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    border: 2px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.3s ease;
+}
+
+.account-button:hover {
+    background-color: white;
+    color: #ff3333;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 4px;
+    margin-top: 5px;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+    color: #ff3333;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Slider styles */
+.slider-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    background: #f5f5f5;
+}
+
+.slider-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    position: relative;
+}
+
+.slide img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+/* Cải thiện màu sắc cho slide content */
+.slide-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #333;
+    width: 80%;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.slide-content h2 {
+    font-size: 42px;
+    color: #ff3333;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.slide-content h3 {
+    font-size: 32px;
+    color: #00b7b7;
+    margin-bottom: 20px;
+}
+
+.slide-content p {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+    font-weight: 500;
+}
+
+.slide-content .order-btn {
+    background-color: #ffcc00;
+    color: #333;
+    padding: 15px 30px;
+    border-radius: 25px;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.slide-content .order-btn:hover {
+    background-color: #e6b800;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.dot-navigation {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot.active {
+    background-color: #fff;
+    transform: scale(1.2);
+}
+
+/* Benefits Section */
+.benefits {
+    background-color: #f0f0f0;
+    padding: 30px 0;
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.benefit-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.benefit-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.benefit-icon {
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffcc00;
+    border-radius: 50%;
+    color: #333;
+}
+
+.benefit-text {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Products section styling */
+.products {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px auto;
+    max-width: 1200px;
+    padding: 0 20px;
+    gap: 20px; /* Thêm khoảng cách giữa các sản phẩm */
+}
+
+.product-item {
+    flex: 1; /* Điều chỉnh để sử dụng không gian có sẵn */
+    max-width: 32%; /* Giới hạn chiều rộng tối đa */
+    position: relative;
+    transition: all 0.3s;
+}
+
+.product-image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 300px; /* Chiều cao cố định cho container */
+}
+
+.product-image-container img {
+    width: 100%;
+    height: 100%; /* Đảm bảo ảnh lấp đầy container */
+    object-fit: cover; /* Đảm bảo ảnh không bị méo */
+    display: block;
+    transition: transform 0.5s;
+}
+
+.product-item:hover .product-image-container img {
+    transform: scale(1.05);
+}
+
+.product-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.product-item:hover .product-overlay {
+    opacity: 1;
+}
+
+.search-icon, .cart-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px; /* Nút lớn hơn */
+    height: 50px; /* Nút lớn hơn */
+    background-color: #fff;
+    border-radius: 50%;
+    margin: 0 10px;
+    color: #333;
+    text-decoration: none;
+    transition: all 0.3s;
+    border: none; /* Loại bỏ viền cho button */
+    cursor: pointer; /* Con trỏ chuột thành dạng tay */
+    font-size: 18px; /* Icon lớn hơn */
+}
+
+.search-icon:hover, .cart-icon:hover {
+    background-color: #e74c3c;
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+
